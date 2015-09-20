@@ -113,7 +113,7 @@ public enum XBeeProtocol {
 		else if (hardwareVersion.getValue() == HardwareVersionEnum.XT09_XXX.getValue()) {
 			if ((firmwareVersion.length() == 4 && firmwareVersion.startsWith("8"))
 					|| (firmwareVersion.length() == 5 && firmwareVersion.charAt(1) == '8'))
-				// Substitui XTEND_DM por DIGI_MESH para poder usar o Modem XTend em modo DigiMesh.
+				// Edited to support Xtend radios on DigiMesh mode.
 				// return XTEND_DM;
 				return DIGI_MESH;
 			return XTEND;
