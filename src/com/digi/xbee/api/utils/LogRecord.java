@@ -9,9 +9,8 @@ public class LogRecord {
 
 	static BufferedWriter bufferedWriter;
 
-	public LogRecord() {
-
-		File file = new File("LogRecord.txt");
+	public static void insertLog(String name, String logEntry) {
+		File file = new File(name+".txt");
 
 		try {
 			FileWriter fileWriter = new FileWriter(file, true);
@@ -19,9 +18,6 @@ public class LogRecord {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-
-	public static void insertLog(String logEntry) {
 		try {
 			bufferedWriter.append(logEntry);
 			bufferedWriter.newLine();
