@@ -10,7 +10,7 @@ public class LogRecord {
 	static BufferedWriter bufferedWriter;
 
 	public static void insertLog(String name, String logEntry) {
-		File file = new File(name+".txt");
+		File file = new File(name + ".txt");
 
 		try {
 			FileWriter fileWriter = new FileWriter(file, true);
