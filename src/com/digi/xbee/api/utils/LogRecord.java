@@ -9,8 +9,8 @@ public class LogRecord {
 
 	static BufferedWriter bufferedWriter;
 
-	public static void insertLog(String name, String logEntry) {
-		File file = new File(name + ".txt");
+	public static void insertLog(String fileName, String logEntry) {
+		File file = new File(fileName + ".txt");
 
 		try {
 			FileWriter fileWriter = new FileWriter(file, true);
