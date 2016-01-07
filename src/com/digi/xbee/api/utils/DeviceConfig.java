@@ -24,6 +24,11 @@ public class DeviceConfig {
 		return baudRate;
 	}
 
+	public int getTimeOutForSyncOperations() throws IOException {
+		int timeout = Integer.parseInt(properties.getProperty("TimeOutForSyncOperations"));
+		return timeout;
+	}
+
 	public String getXBeePort() throws IOException {
 		String port = properties.getProperty("XBeePort");
 		return port;
